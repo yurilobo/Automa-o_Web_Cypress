@@ -15,6 +15,16 @@ class testElements{
     BotaoCheckout= ()=>{
         return '.button-container > .button-medium > span'
     }
+    MsnSucesso = ()=>{
+        return '.layer_cart_product > h2'
+    }
+    QtdProduto = ()=>{
+        return '#layer_cart_product_quantity'
+    }
+    ProductName = ()=>{
+        return '.product-name'
+    }
+   
     
     //validarTitulo = ()=>{
       //  return 'title'
