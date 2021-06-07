@@ -16,14 +16,14 @@ When(/^pesquiso o produto com "([^"]*)"$/, () => {
     //cy.get('#searchbox > .btn').click()
     
 });
-When(/^clico no botao "([^"]*)"$/, () => {
-PageTest.clicarBotaoAdd()
+When(/^clico no botao "([^"]*)"$/, () => {	
+	PageTest.clicarBotaoAdd()
     
 });
 
 
 And(/^clico no botao de checkout$/, () => {
-    cy.get('.button-container > .button-medium > span').contains('Proceed to checkout').click()
+    PageTest.clicarBotaoCheckout()
 });
 
 
