@@ -1,19 +1,24 @@
 /*global Given, When, Then, And*/
-
+import TestPage from '../PageObject/testPage'
+const PageTest= new TestPage
 
 
 Given(/^que estou na pagina inicial$/, () => {
-	cy.visit('/')
+	//cy.visit('/')
+	PageTest.acessarSite()
+	cy.title().should('eq','My Store')
 });
 
 When(/^pesquiso o produto com "([^"]*)"$/, () => {
-	cy.get('#search_query_top').type('Faded Short Sleeve')
-    cy.get('#searchbox > .btn').click()
+	//cy.get('#search_query_top').type('Faded Short Sleeve')
+	PageTest.pesquisarElementos()
+	PageTest.clicarPesquisaElemento()
+    //cy.get('#searchbox > .btn').click()
     
 });
 When(/^clico no botao "([^"]*)"$/, () => {
-	cy.get('.button-container').contains('Add to cart').click({force: true})
-    cy.wait(3000)
+PageTest.clicarBotaoAdd()
+    
 });
 
 
