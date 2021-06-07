@@ -17,12 +17,14 @@ When(/^clico no botao "([^"]*)"$/, () => {
 });
 
 
-And(/^aguardo o processamento$/, () => {
+And(/^clico no botao de checkout$/, () => {
     cy.get('.button-container > .button-medium > span').contains('Proceed to checkout').click()
 });
 
-Then(/^o produto é adicionado ao carrinho$/, () => {
-	
+
+Then(/^o produto esta no carrinho$/, () => {
+	return true;
 });
+
 
 

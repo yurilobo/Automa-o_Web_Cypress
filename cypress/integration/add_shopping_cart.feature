@@ -6,7 +6,7 @@ Feature: Produto no carrinho
     Given que estou na pagina inicial
     When pesquiso o produto com "Faded Short Sleeve T-shirts"
     When clico no botao "Add to cart"
-    And aguardo o processamento
-    Then o produto é adicionado ao carrinho
+    And clico no botao de checkout
+    Then o produto esta no carrinho
 
    
